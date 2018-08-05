@@ -16,22 +16,6 @@
             {% include "pagination.html" %}
 
         </div>
-
-        <div class="pure-u-1 pure-u-lg-1-3">
-            <div class="right-container">
-                <div class="right-bar">
-                    <div class="right-head">
-                         Tags
-                    </div>
-                    <div class="tags">
-                    {% for tag, null in tags %}
-                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                    {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
