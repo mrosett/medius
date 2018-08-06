@@ -35,51 +35,52 @@
         {% endif %}
         {% endblock head %}
 </head>
+
 <body>
-
-    <div class="navigation pure-menu pure-menu-horizontal">
-        <a href="{{ SITEURL }}/" class="pure-menu-heading  pure-menu-link">{{ SITENAME }}</a>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"></li>
+    <header class="site-header outer no-cover">
+        <div class="inner">
+            <div class="site-header-content">
+                <h1 class="site-title">{{ SITENAME }}</h1>
+                <h2 class="site-description">{{ SITEDESCRIPTION }}</h2>
+            </div>
+            <nav class="site-nav">
+                <div class="site-nav-left">
+                    <ul class="nav" role="menu">
+                        <li class="nav-home" role="menuitem">
+                            <a href="{{ SITEURL }}/">Home</a>
+                        </li>
             {% for title, link in MENUITEMS %}
-            <li class="pure-menu-item"><a href="{{ link }}" class="pure-menu-link">{{ title }}</a></li>
+                        <li class="nav-home" role="menuitem">
+                            <a href="{{ link }}">{{ title }}</a>
+                        </li>
             {% endfor %}
-
-            {% if DISPLAY_PAGES_ON_MENU %}
-            {% for p in pages %}
-            <li class="pure-menu-item{% if p == page %} pure-menu-selected{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}" class="pure-menu-link">{{ p.title }}</a></li>
-            {% endfor %}
-            {% endif %}
-            {% if DISPLAY_CATEGORIES_ON_MENU %}
-            {% for cat, null in categories %}
-            <li class="pure-menu-item{% if cat == category %} pure-menu-selected{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}" class="pure-menu-link">{{ cat }}</a></li>
-            {% endfor %}
-            {% endif %}
+                    </ul>
+                </div>
+                <div class="site-nav-right">
+                    <div class="social-links">
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
         </ul>
     </div>
 
 
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
 
 
     <footer class="index-footer">
 
         <a href="{{ SITEURL }}/" title="{{ SITENAME|striptags }}">{{ SITENAME }}</a>
         {% for title, link in MENUITEMS %}
-        <a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}
-        {% for p in PAGES %}
+        <a href="{{ link }}">{{ title }}</a>
+        </li>
+        {% endfor %} {% if DISPLAY_PAGES_ON_MENU %} {% for p in PAGES %}
         <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
-        {% endfor %}
-        {% endif %}
-        {% if DISPLAY_CATEGORIES_ON_MENU %}
-        {% for cat, null in categories %}
+        {% endfor %} {% endif %} {% if DISPLAY_CATEGORIES_ON_MENU %} {% for cat, null in categories %}
         <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
-        {% endfor %}
-        {% endif %}
-        {% for title, link in LINKS %}
+        {% endfor %} {% endif %} {% for title, link in LINKS %}
         <a href="{{ link }}">{{ title }}</a>
         {% endfor %}
 
