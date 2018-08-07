@@ -73,7 +73,7 @@ div.main-container {
   padding: 5px;
   background-color: #fafafa; }
   div.main-container .pure-g {
-    max-width: 1000px;
+    max-width: 780px;
     margin: 0 auto; }
   @media screen and (min-width: 48em) {
     div.main-container {
@@ -632,9 +632,9 @@ div.pagination {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vw 4vw;
+  padding: 4vw 4vw;
   min-height: 200px;
-  max-height: 450px;
+  max-height: 250px;
   text-align: center; }
 
 .site-title {
