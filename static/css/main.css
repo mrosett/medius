@@ -46,7 +46,8 @@ div.post-content, div.entry-content {
   div.post-content h4, div.entry-content h4 {
     font-size: 28px; }
   div.post-content h5, div.post-content h6, div.entry-content h5, div.entry-content h6 {
-    font-size: 26px; }
+    font-size: 26px;
+    line-height: 1.4; }
   div.post-content h3, div.post-content h4, div.post-content h5, div.post-content h6, div.entry-content h3, div.entry-content h4, div.entry-content h5, div.entry-content h6 {
     font-weight: 300; }
   div.post-content a, div.entry-content a {
@@ -181,8 +182,7 @@ div.post-meta div.meta-data {
     color: rgba(0, 0, 0, 0.6); }
 
 div.page-container {
-  text-align: center;
-  margin-top: 80px; }
+  text-align: center; }
   div.page-container div.entry-content {
     max-width: 700px;
     margin: 0 auto;

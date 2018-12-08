@@ -37,32 +37,6 @@
 </head>
 
 <body>
-    <header class="site-header outer no-cover">
-        <div class="inner">
-            <div class="site-header-content">
-                <h1 class="site-title">{{ SITENAME }}</h1>
-                <h2 class="site-description">{{ SITEDESCRIPTION }}</h2>
-            </div>
-            <nav class="site-nav">
-                <div class="site-nav-left">
-                    <ul class="nav" role="menu">
-                        <li class="nav-home" role="menuitem">
-                            <a href="{{ SITEURL }}/">Home</a>
-                        </li>
-            {% for title, link in MENUITEMS %}
-                        <li class="nav-home" role="menuitem">
-                            <a href="{{ link }}">{{ title }}</a>
-                        </li>
-            {% endfor %}
-                    </ul>
-                </div>
-                <div class="site-nav-right">
-                    <div class="social-links">
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
 
     {% block content %} {% endblock %}
 

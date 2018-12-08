@@ -1,6 +1,6 @@
 <div class="pure-u-3-4 meta-data">
     {% for author in article.authors %}
-    <a class="author" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+    <a class="author" href="{{ SITEURL }}">{{ author }}</a>
     {% endfor %}
     &mdash; <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
     {% if article.readtime_minutes %}

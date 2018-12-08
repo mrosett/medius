@@ -6,3 +6,5 @@ website](https://onur.github.io/medius/medius.html).
 
 
 ![Screenshot](/screenshot.png?raw=true)
+
+To build CSS, run `node-sass scss -o static/css`
