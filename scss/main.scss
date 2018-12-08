@@ -72,8 +72,15 @@ div.post-content, div.entry-content {
         font-weight: normal;
     }
 
+    h3, h4, h5, h6, p {
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+    }
+
     h1, h2 {
         font-size: 36px;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
     }
 
     h3 {
@@ -324,7 +331,9 @@ div.page-container {
         font-family: $font-family-serif;
         font-size: 18px;
         line-height: 1.5;
-        padding: 20px;
+        padding: 2px;
+        margin-block-start: 0;
+        margin-block-end: 0;
 
         @media #{$media-sm} {
             line-height: 1.6;
